@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
-    <h1>📚 Biblioteca en Laravel</h1>
+    <h1> Biblioteca en Laravel</h1>
 
     <a href="#">+ Agregar Nuevo Libro</a>
     <hr>
