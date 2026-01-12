@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 </head>
 <body>
-    <h1>Nuevo Libro ✍️</h1>
+    <h1>Nuevo Libro </h1>
     
     <form action="{{ route('libros.store') }}" method="POST">
         
