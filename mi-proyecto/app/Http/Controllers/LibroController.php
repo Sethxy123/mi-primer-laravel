@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Libro;
+use PhpParser\Node\Expr\FuncCall;
+
 class LibroController extends Controller
 {
     public function index(){
@@ -21,6 +23,11 @@ class LibroController extends Controller
         'precio' =>'required|numeric'
         ]);
         Libro::create($request->all());
+        return redirect()->route('libros.index');
+    }
+    public function destruir($id){
+        $libro=Libro::findOrFail($id);
+        $libro->delete();
         return redirect()->route('libros.index');
     }
     

@@ -19,4 +19,6 @@ Route::get('/libros/crear', [LibroController::class, 'create'])->name('libros.cr
 
 // 3. Ruta para GUARDAR los datos (POST)
 Route::post('/librosCrear', [LibroController::class, 'store'])->name('libros.store');
+//Ruta para borrar
+Route::delete('/libros/{id}', [LibroController::class, 'destruir'])->name('libros.destroy')
 ?>
