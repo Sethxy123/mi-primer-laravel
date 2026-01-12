@@ -7,7 +7,7 @@
 <body>
     <h1> Biblioteca en Laravel</h1>
 
-    <a href="#">+ Agregar Nuevo Libro</a>
+    <a href="{{route('libros.create')}}">+ Agregar Nuevo Libro</a>
     <hr>
 
     <table>
