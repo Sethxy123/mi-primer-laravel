@@ -27,6 +27,11 @@
                     <td>{{ $libro->titulo }}</td>
                     <td>{{ $libro->autor }}</td>
                     <td>${{ number_format($libro->precio, 2) }}</td>
+                     <td>
+                                <a href="{{route('libros.edit',$libro->id)}}"style="color: orange; margin-right: 10px;">
+                               EDITAR
+                                </a> 
+                     </td>
                     <td>
                         <form action="{{route('libros.destroy',$libro->id)}}" method="POST" style="display: inline;">
                             @csrf
@@ -34,7 +39,8 @@
                             <button type="submit"style="background-color: red; color: white; border: none; padding: 5px 10px; cursor: pointer;" >
                                 BORRAR
                             </button></td></form>
-                </tr>
+                           
+                                </tr>
             @endforeach
         </tbody>
     </table>

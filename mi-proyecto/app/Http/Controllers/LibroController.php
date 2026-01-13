@@ -30,5 +30,19 @@ class LibroController extends Controller
         $libro->delete();
         return redirect()->route('libros.index');
     }
+    public function edit($id){
+    $libro=Libro::findOrFail($id);
+    return view('libros.edit',['libro'=>$libro]);
+    }
+
+    public function update(Request $request,$id){
+        $request->validate([
+        'titulo'=>'required',
+        'precio'=>'required|numeric'
+        ]);
+        $libro=Libro::findOrFail($id);
+            $libro->update($request->all());
+            return redirect()->route('libros.index');
+        }
     
 }

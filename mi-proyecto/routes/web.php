@@ -20,5 +20,11 @@ Route::get('/libros/crear', [LibroController::class, 'create'])->name('libros.cr
 // 3. Ruta para GUARDAR los datos (POST)
 Route::post('/librosCrear', [LibroController::class, 'store'])->name('libros.store');
 //Ruta para borrar
-Route::delete('/libros/{id}', [LibroController::class, 'destruir'])->name('libros.destroy')
+Route::delete('/libros/{id}', [LibroController::class, 'destruir'])->name('libros.destroy');
+
+// Muestra el formulario de edición
+Route::get('/libros/{id}/edit', [LibroController::class, 'edit'])->name('libros.edit');
+
+// Procesa la actualización (Nota que usamos PUT, no POST)
+Route::put('/libros/{id}', [LibroController::class, 'update'])->name('libros.update');
 ?>
